@@ -21,7 +21,7 @@ Le projet met en pratique :
 - La gestion sécurisée d’une clé API
 - Un design moderne avec Tailwind
 
-Stack technique :
+### Stack technique :
 - React
 - TypeScript
 - TailwindCSS
