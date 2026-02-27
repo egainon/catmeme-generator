@@ -12,7 +12,7 @@ Ce projet est une application front-end qui :
 - Fait un appel API vers The Cat API
 - Récupère une image aléatoire
 - Sélectionne une légende aléatoire depuis un tableau local
-- Affiche le tout avec un design responsive et moderne (TailwindCSS)
+- Affiche le tout avec un design responsive (TailwindCSS)
 
 Le projet met en pratique :
 - Les hooks React (useState, useEffect)
