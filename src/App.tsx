@@ -5,6 +5,7 @@ import { funnyLegends } from "./data/Legends";
 
 function App() {
   const API_URL = "https://api.thecatapi.com/v1/images/search";
+  const API_KEY = import.meta.env.VITE_CAT_API_KEY;
   const [catImage, setCatImage] = useState<Cat | null>(null); //useState<Cat | null>(null) crée une variable d'état catImage qui peut contenir soit un objet de type Cat, soit null (valeur initiale), et setCatImage est la fonction pour modifier cette valeur.
 
   const [legend, setLegend] = useState<string>("");
