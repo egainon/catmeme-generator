@@ -23,5 +23,5 @@ export const funnyLegends = [
   "Énergie du chat à 2h du mat",
   "Philosophe du dimanche",
   "Mood toute la semaine",
-  "Chaos incarné",
+  "Chaos incarné"
 ];

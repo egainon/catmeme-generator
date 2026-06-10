@@ -1,7 +1,7 @@
+import "./App.css";
 import { useEffect, useState } from "react";
 import type { Cat } from "./types/cat";
 import { funnyLegends } from "./data/Legends";
-import { API_KEY } from "./key/key";
 
 function App() {
   const API_URL = "https://api.thecatapi.com/v1/images/search";
