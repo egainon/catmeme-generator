@@ -4,13 +4,14 @@ import type { Cat } from "./types/cat";
 import { funnyLegends } from "./data/Legends";
 
 function App() {
-  const API_URL = "https://api.thecatapi.com/v1/images/search";
   const API_KEY = import.meta.env.VITE_CAT_API_KEY;
   const [catImage, setCatImage] = useState<Cat | null>(null);
   const [legend, setLegend] = useState<string>("");
 
   const fetchRandomCat = async () => {
     try {
+      const size = window.innerWidth < 640 ? "small" : "med";
+      const API_URL = `https://api.thecatapi.com/v1/images/search?size=${size}`;
       const res = await fetch(API_URL, {
         headers: { "x-api-key": API_KEY },
       });
@@ -29,7 +30,7 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-linear-to-br from-pink-300 to-purple-400 p-4 sm:p-8 flex flex-col items-center justify-center">
+    <div className="min-h-screen bg-gradient-to-br from-pink-300 to-purple-400 p-4 sm:p-8 flex flex-col items-center justify-center">
       <h1 className="text-2xl sm:text-4xl font-bold text-white text-center mb-6 sm:mb-8">
         Cat Generator
       </h1>
@@ -38,6 +39,7 @@ function App() {
           <img
             src={catImage.url}
             alt="Random cat"
+            loading="lazy"
             className="w-full mb-3 rounded-lg max-h-[50vh] sm:max-h-[70vh] object-contain"
           />
           <p className="text-white text-base sm:text-xl font-semibold mb-4 text-center px-2">
